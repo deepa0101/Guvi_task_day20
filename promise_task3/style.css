@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    background-image: url(https://ih1.redbubble.net/image.3623367837.4636/gbrf,5x7,f,540x540-pad,450x450,f8f8f8.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+div.transbox {
+    display: flexbox;
+    flex-direction: column;
+    margin: 30px;
+    background-color: #a7c2f4;
+    border: 1px solid black;
+    opacity: 0.9;
+  }
+  
+div.transbox {
+    font-weight: bolder;
+    color: #000000;
+
+}

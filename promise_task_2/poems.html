@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <script> 
+    let authorid = localStorage["id"]
+    let poemID = localStorage["poemId"]
+    const div1 = document.createElement("div");
+    div1.setAttribute("class","transbox")
+    const titleOfPoem = document.createElement("h1");
+    titleOfPoem.innerHTML=`${poemID} <sub> by ${authorid} <sub>`
+    div1.appendChild(titleOfPoem)
+    document.body.appendChild(div1)
+
+    async function getPoem(){
+        try{
+        let url = `https://poetrydb.org/title/${poemID}`
+        let req2= await fetch(url);
+        const data = await req2.json()
+        return data 
+    } catch(e){
+        alert(e)
+    }
+}
+    
+    async function  createBody(){
+        let data = await getPoem();
+        
+        data.forEach(element => {
+            const div = document.createElement("div")
+            div.setAttribute("class","transbox")
+            for(let i in element.lines){
+            const para = document.createElement("p")
+            para.innerHTML=element.lines[i]
+            div.appendChild(para)
+            }
+            document.body.append(div)
+        });
+        
+        
+    }
+    
+    createBody()
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+h1{
+    border: 1px solid black;
+    background-color: lavender;
+}
+
+label{
+    color:black
+}
+
+.searchBar{
+    padding: 50px;
+    color: blue;
+}
+body{
+   text-align: center;
+   background-image: url(https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?w=1060&t=st=1709481687~exp=1709482287~hmac=b769af8427a6d0f67d2788b225c602ef19165b1306fabf82b73d1980bd51f3eb)
+}

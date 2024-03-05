@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+    margin:  2em;
+    background-image: url(https://miro.medium.com/v2/resize:fit:1024/1*eEsctdu-40e7UP0G2Kw_XA.jpeg);
+}
+div.transbox {
+    display: flexbox;
+    flex-direction: column;
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+  }
+  
+div.transbox {
+    font-weight: bolder;
+    color: #000000;
+
+}
+button.transbox {
+    margin: 10px 10px;
+    background-color: #ffffff;
+    border: 3px solid black;
+    opacity: 0.8;
+    width: 200px;
+  }
+  
+button.transbox {
+    font-weight: bolder;
+    color: #000000;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        let authorid = localStorage["id"]
+        let divelement = document.createElement("div")
+        divelement.setAttribute("class","transbox container")
+        let heading = document.createElement("h1");
+        heading.innerHTML=`The poems Written by ${authorid}`
+        divelement.appendChild(heading)
+        
+        async function getPoem(){
+        try
+        {
+        let url = `https://poetrydb.org/author/${authorid}/title`
+        let req2= await fetch(url);
+        const data = await req2.json()
+        return data 
+    }
+    catch(e){
+        alert(e)
+    }}
+async function  createBody(){
+        let data = await getPoem();
+        data.forEach(element => {
+           let title= document.createElement("button");
+           title.innerHTML = `${element.title}`
+           title.setAttribute("id",`${element.title}`)
+           title.setAttribute("class","transbox")
+           document.body.appendChild(title)
+            
+        }); 
+    }
+    const onClick = (event) => {
+     window.location.href = "poems.html"
+    localStorage["poemId"]  =event.target.id;
+  }
+  window.addEventListener('click', onClick);
+    document.body.appendChild(divelement)
+    createBody()
+    </script>
+</body>
+</html>
