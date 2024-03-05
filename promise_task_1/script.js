@@ -6,7 +6,7 @@ async function getInput() {
         alert("please enter some movie name")
     }
     else{
-    let url = `http://www.omdbapi.com/?apikey=5138c94b&t=${input}`
+    let url = `https://www.omdbapi.com/?apikey=5138c94b&t=${input}`
     let req= await fetch(url);
     let data = req.json();
     return data
