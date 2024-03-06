@@ -6,7 +6,7 @@ Task 2:
 API used: PoetryDb--->https://github.com/thundercomb/poetrydb#readme
 netlifyDeployLink: https://glistening-cendol-ed6c47.netlify.app/poems.html
 
-This tash has 3 three Pages:
+This task has 3 three Pages:
 page1: Lists all the poets(click on any poet's name of your choice to navigate to next page)
 page2: Lists all poem titles written by the selected poet(click on poem of your choice)
 page3: shows the wholee poem
